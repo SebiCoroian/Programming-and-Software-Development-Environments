@@ -11,20 +11,22 @@
     </Window.Background>
     <Grid>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" 
-Width="131" Margin="0,26,0,0">
+Width="230">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="_Doughnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"  
+Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"  
+IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
                     <MenuItem Header="Filled"/>
                 </MenuItem>
+                <MenuItem x:Name="mnuStop" Header="Stop"/>
             </MenuItem>
-
         </Menu>
         <Label x:Name="lblTitle" Content="Doughnuts  - Bake &amp; Sale" HorizontalAlignment="Center" Height="93" Margin="0,57,0,0" VerticalAlignment="Top" Width="301" AutomationProperties.Name="lblTitle" FontSize="24" FontWeight="Bold"/>
         <Canvas HorizontalAlignment="Left" Height="176" Margin="452,104,0,0" VerticalAlignment="Top" Width="229"/>
